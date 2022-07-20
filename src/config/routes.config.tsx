@@ -27,6 +27,14 @@ const AppRouter = (props: any) => {
             </AppRoute>
           }
         />
+        <Route
+          path='*'
+          element={
+            <AppRoute>
+              <div className=''>404 not found</div>
+            </AppRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
