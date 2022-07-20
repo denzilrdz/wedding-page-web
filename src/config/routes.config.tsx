@@ -31,7 +31,7 @@ const AppRouter = (props: any) => {
           path='*'
           element={
             <AppRoute>
-              <div className=''>404 not found</div>
+              <div className=''>404 NOT FOUND</div>
             </AppRoute>
           }
         />
