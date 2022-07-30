@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import { persistor, store } from './config/store';
 import Routes from './config/routes.config';
+import './index.css';
 
 function App() {
   return (
