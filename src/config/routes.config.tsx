@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, FC } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { State } from '../interface/state';
@@ -8,8 +8,9 @@ const propTypes = {};
 const defaultProps = {};
 
 const Home = lazy(() => import('../container/home.container'));
+const NotFound = lazy(() => import('../components/notFound'));
 
-const AppRouter = (props: any) => {
+const AppRouter: FC = (props: any) => {
   const AppRoute = ({ children }: any) => {
     if (false) return <Navigate to='/' />;
     return children;
@@ -31,7 +32,9 @@ const AppRouter = (props: any) => {
           path='*'
           element={
             <AppRoute>
-              <div className=''>404 NOT FOUND</div>
+              <Suspense fallback={<div></div>}>
+                <NotFound />
+              </Suspense>
             </AppRoute>
           }
         />

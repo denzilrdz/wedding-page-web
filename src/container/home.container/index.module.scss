@@ -1,3 +1,16 @@
-.addBtn {
-  color: red;
+@use '../../styles/color.module.scss' as Color;
+
+.logoContainer {
+  width: 100%;
+  background-color: Color.$secondaryColor;
+}
+.logo {
+  background-image: url(../../static/img/Logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+  width: 20rem;
+}
+.cardImg {
+  width: 32rem;
 }
